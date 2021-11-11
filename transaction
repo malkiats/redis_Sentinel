@@ -1,0 +1,38 @@
+
+127.0.0.1:6379> MULTI
+OK
+127.0.0.1:6379(TX)> SET key1 val1
+QUEUED
+127.0.0.1:6379(TX)> SET key1 val2
+QUEUED
+127.0.0.1:6379(TX)> SET key1 val3
+QUEUED
+127.0.0.1:6379(TX)> SET key1 val4
+QUEUED
+127.0.0.1:6379(TX)> SET key1 val5
+QUEUED
+127.0.0.1:6379(TX)> EXEC
+1) OK
+2) OK
+3) OK
+4) OK
+5) OK
+
+127.0.0.1:6379> KEYS *
+ 1) "fullname"
+ 2) "yearofbirth"
+ 3) "colors"
+ 4) "user:2"
+ 5) "lastname"
+ 6) "user:3"
+ 7) "firstname"
+ 8) "user:1"
+ 9) "teams"
+10) "firstName"
+11) "key1"
+127.0.0.1:6379> MULTI
+OK
+127.0.0.1:6379(TX)> DEL key1 key2
+QUEUED
+127.0.0.1:6379(TX)> DISCARD
+OK
