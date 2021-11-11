@@ -1,4 +1,3 @@
-# redis_Sentinel
 1. Redis is an in-memory database structure use it as a database cache and message broker for high performance and replication, persistance on disk, client side sharding, transaction and queuing.
 2. no sequel or simply non rational, register is no table and there is no database
 
