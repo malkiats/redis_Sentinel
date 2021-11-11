@@ -16,7 +16,12 @@
 3. This Sentinel agreement is done according to the quorum value.
 4. Quron is number if santino that needs to agree about the fact that the master is not reachable in order to really mark the master as failing and start avialable process.
 ![image](https://user-images.githubusercontent.com/43002915/141262080-dbd44485-a33e-4bec-8f74-d2bfec536ca7.png)
+
+
 ![image](https://user-images.githubusercontent.com/43002915/141262463-6c35883b-70e0-47f8-92f5-357fedfa34a3.png)
 
 
 ![image](https://user-images.githubusercontent.com/43002915/141264588-71ca92d0-e5a8-4359-a762-61856535b7ae.png)
+
+
+![image](https://user-images.githubusercontent.com/43002915/141267673-13cd09d0-2853-489d-8ab2-03f50f50487b.png)
