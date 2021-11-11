@@ -1,0 +1,110 @@
+redis-cli
+
+> Info               # CPU, Replication, stats, Memory, Clients, Server
+> INFO replication   # Replication information
+> KEYS *	     # List of the keys projects
+
+> SET		# Will allow you to create new record
+
+> SET firstName Malkiat
+OK
+
+> GET firstName
+"Malkiat"
+
+> SET firstName "Malkiat singh"
+OK
+
+> GET firstName
+"Malkiat singh"
+
+> SET lastname Singh
+OK
+
+> GET lastname
+"Singh"
+
+> KEYS *
+1) "lastename"
+2) "firstName"
+
+> EXISTS lastename
+(integer) 1
+
+> EXPIRE lastename 10
+(integer) 1
+
+> EXPIRE email 300
+(integer) 1
+
+> TTL email
+(integer) 294
+
+> SETEX age 400 32
+OK
+
+> TTL age
+(integer) 393
+
+> SETNX yearofbirth 1989
+(integer) 1
+
+> KEYS *
+1) "firstname"
+2) "email"
+3) "yearofbirth"
+4) "firstName"
+5) "lastname"
+6) "age"
+
+127.0.0.1:6379> INCR age
+(integer) 33
+127.0.0.1:6379> INCR age
+(integer) 34
+
+127.0.0.1:6379> INCRBY age 100
+(integer) 134
+
+
+127.0.0.1:6379> INCRBY age -100
+(integer) 34
+127.0.0.1:6379> DECR age
+(integer) 33
+
+127.0.0.1:6379> SET fullname "Malkiat"
+OK
+127.0.0.1:6379> APPEND fullname " Singh"
+(integer) 13
+127.0.0.1:6379> GET fullname
+"Malkiat Singh"
+
+
+
+127.0.0.1:6379> MGET firstname lastname
+1) "blabla"
+2) "Singh"
+
+127.0.0.1:6379> MSET key1 val1 key2 val2
+OK
+127.0.0.1:6379> KEYS *
+1) "key2"
+2) "firstname"
+3) "fullname"
+4) "yearofbirth"
+5) "firstName"
+6) "lastname"
+7) "key1"
+
+127.0.0.1:6379> MGET key1 key2
+1) "val1"
+2) "val2"
+
+
+127.0.0.1:6379> DEL key1 key2
+(integer) 2
+127.0.0.1:6379> KEYS *
+1) "firstname"
+2) "fullname"
+3) "yearofbirth"
+4) "firstName"
+5) "lastname"
