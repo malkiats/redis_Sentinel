@@ -11,4 +11,10 @@
 6. Gaming App scoreboards
 7. Geo Hashing
 
-#
+# Redis sentinel
+1. Robust distributed system.
+2. Multiple sentinels need to agree about the fact a given master is no longer available. And then failover process starts to select a new MASTER node.
+3. This Sentinel agreement is done according to the quorum value.
+4. Quron is number if santino that needs to agree about the fact that the master is not reachable in order to really mark the master as failing and start avialable process.
+![image](https://user-images.githubusercontent.com/43002915/141262080-dbd44485-a33e-4bec-8f74-d2bfec536ca7.png)
+![image](https://user-images.githubusercontent.com/43002915/141262463-6c35883b-70e0-47f8-92f5-357fedfa34a3.png)
