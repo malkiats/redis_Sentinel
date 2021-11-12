@@ -1,0 +1,23 @@
+127.0.0.1:6379> SADD colors blue
+(integer) 1
+127.0.0.1:6379> SADD colors blue red green yellow
+(integer) 3
+127.0.0.1:6379>
+127.0.0.1:6379> SMEMBERS colors
+1) "red"
+2) "yellow"
+3) "green"
+4) "blue"
+127.0.0.1:6379> SCARD colors
+(integer) 4
+127.0.0.1:6379> SISMEMBER color black
+(integer) 0
+127.0.0.1:6379> SISMEMBER color red
+(integer) 0
+
+127.0.0.1:6379> SREM colors yellow
+(integer) 1
+127.0.0.1:6379> SMEMBERS colors
+1) "red"
+2) "green"
+3) "blue"

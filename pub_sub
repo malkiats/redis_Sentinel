@@ -1,0 +1,22 @@
+
+127.0.0.1:6379> SUBSCRIBE chat
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "chat"
+3) (integer) 1
+
+1) "message"
+2) "chat"
+3) "Hi i am here"
+1) "message"
+2) "chat"
+3) "are you there"
+
+
+127.0.0.1:6379> PUBLISH chat "Hi i am here"
+(integer) 1
+127.0.0.1:6379> PUBLISH chat "are you there"
+(integer) 1
+
+127.0.0.1:6379> PUBLISH notifications "are you there"
+(integer) 0
