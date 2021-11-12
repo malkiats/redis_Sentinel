@@ -1,0 +1,6 @@
+Uncomment requirepass from master.conf
+
+# The requirepass is not compatable with aclfile option and the ACL LOAD
+# command, these will cause requirepass to be ignored.
+#
+# requirepass 1234
