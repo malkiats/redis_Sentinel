@@ -20,3 +20,17 @@ services:
       - "./data/slave:/data/"
       - "./slave.conf:/etc/redis.conf"
 
+  redis-sentinel:
+    container_name: "redis-sentinel"
+    image: redis
+    ports:
+      - "26379-26379"
+    command: "redis-server /etc/redis-sentinel.conf --sentinel"
+    volumes:
+      - "./redis-sentinel.conf:/etc/redis-sentinel.conf"
+    depends_on:
+      - redis-master
+      - redis-slave
+
+
+
